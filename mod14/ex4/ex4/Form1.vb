@@ -17,7 +17,11 @@
         TextBox2.Text = num2
         TextBox3.Text = num3
 
-        If (num1 = 7 Or num2 = 7 Or num3 = 7) Then
+        If (num1 = 7 And num2 = 7) Then
+            Label2.Text = "Parabéns, Ganhou! "
+        ElseIf (num1 = 7 And num3 = 7) Then
+            Label2.Text = "Parabéns, Ganhou! "
+        ElseIf (num2 = 7 And num3 = 7) Then
             Label2.Text = "Parabéns, Ganhou! "
         Else
             Label2.Text = "Tente de novo! "
