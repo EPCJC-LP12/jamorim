@@ -23,28 +23,28 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Dim IdLabel As System.Windows.Forms.Label
         Dim NomeLabel As System.Windows.Forms.Label
         Dim MoradaLabel As System.Windows.Forms.Label
         Dim ContatoLabel As System.Windows.Forms.Label
         Dim NomecontatoLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Database1DataSet = New bd02.Database1DataSet()
         Me.RestaurantesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RestaurantesTableAdapter = New bd02.Database1DataSetTableAdapters.RestaurantesTableAdapter()
         Me.TableAdapterManager = New bd02.Database1DataSetTableAdapters.TableAdapterManager()
         Me.RestaurantesBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.RestaurantesBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.IdTextBox = New System.Windows.Forms.TextBox()
         Me.NomeTextBox = New System.Windows.Forms.TextBox()
@@ -61,6 +61,51 @@ Partial Class Form1
         CType(Me.RestaurantesBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RestaurantesBindingNavigator.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'IdLabel
+        '
+        IdLabel.AutoSize = True
+        IdLabel.Location = New System.Drawing.Point(81, 44)
+        IdLabel.Name = "IdLabel"
+        IdLabel.Size = New System.Drawing.Size(18, 13)
+        IdLabel.TabIndex = 1
+        IdLabel.Text = "id:"
+        '
+        'NomeLabel
+        '
+        NomeLabel.AutoSize = True
+        NomeLabel.Location = New System.Drawing.Point(81, 70)
+        NomeLabel.Name = "NomeLabel"
+        NomeLabel.Size = New System.Drawing.Size(36, 13)
+        NomeLabel.TabIndex = 3
+        NomeLabel.Text = "nome:"
+        '
+        'MoradaLabel
+        '
+        MoradaLabel.AutoSize = True
+        MoradaLabel.Location = New System.Drawing.Point(81, 96)
+        MoradaLabel.Name = "MoradaLabel"
+        MoradaLabel.Size = New System.Drawing.Size(45, 13)
+        MoradaLabel.TabIndex = 5
+        MoradaLabel.Text = "morada:"
+        '
+        'ContatoLabel
+        '
+        ContatoLabel.AutoSize = True
+        ContatoLabel.Location = New System.Drawing.Point(81, 122)
+        ContatoLabel.Name = "ContatoLabel"
+        ContatoLabel.Size = New System.Drawing.Size(46, 13)
+        ContatoLabel.TabIndex = 7
+        ContatoLabel.Text = "contato:"
+        '
+        'NomecontatoLabel
+        '
+        NomecontatoLabel.AutoSize = True
+        NomecontatoLabel.Location = New System.Drawing.Point(81, 148)
+        NomecontatoLabel.Name = "NomecontatoLabel"
+        NomecontatoLabel.Size = New System.Drawing.Size(72, 13)
+        NomecontatoLabel.TabIndex = 9
+        NomecontatoLabel.Text = "nomecontato:"
         '
         'Database1DataSet
         '
@@ -102,6 +147,31 @@ Partial Class Form1
         Me.RestaurantesBindingNavigator.TabIndex = 0
         Me.RestaurantesBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -134,17 +204,10 @@ Partial Class Form1
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 15)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -152,7 +215,7 @@ Partial Class Form1
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Move next"
         '
         'BindingNavigatorMoveLastItem
@@ -161,121 +224,58 @@ Partial Class Form1
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'RestaurantesBindingNavigatorSaveItem
         '
         Me.RestaurantesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.RestaurantesBindingNavigatorSaveItem.Image = CType(resources.GetObject("RestaurantesBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.RestaurantesBindingNavigatorSaveItem.Name = "RestaurantesBindingNavigatorSaveItem"
-        Me.RestaurantesBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.RestaurantesBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.RestaurantesBindingNavigatorSaveItem.Text = "Save Data"
-        '
-        'IdLabel
-        '
-        IdLabel.AutoSize = True
-        IdLabel.Location = New System.Drawing.Point(149, 106)
-        IdLabel.Name = "IdLabel"
-        IdLabel.Size = New System.Drawing.Size(18, 13)
-        IdLabel.TabIndex = 1
-        IdLabel.Text = "id:"
         '
         'IdTextBox
         '
         Me.IdTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RestaurantesBindingSource, "id", True))
-        Me.IdTextBox.Location = New System.Drawing.Point(227, 103)
+        Me.IdTextBox.Location = New System.Drawing.Point(159, 41)
         Me.IdTextBox.Name = "IdTextBox"
         Me.IdTextBox.Size = New System.Drawing.Size(100, 20)
         Me.IdTextBox.TabIndex = 2
         '
-        'NomeLabel
-        '
-        NomeLabel.AutoSize = True
-        NomeLabel.Location = New System.Drawing.Point(149, 132)
-        NomeLabel.Name = "NomeLabel"
-        NomeLabel.Size = New System.Drawing.Size(36, 13)
-        NomeLabel.TabIndex = 3
-        NomeLabel.Text = "nome:"
-        '
         'NomeTextBox
         '
         Me.NomeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RestaurantesBindingSource, "nome", True))
-        Me.NomeTextBox.Location = New System.Drawing.Point(227, 129)
+        Me.NomeTextBox.Location = New System.Drawing.Point(159, 67)
         Me.NomeTextBox.Name = "NomeTextBox"
         Me.NomeTextBox.Size = New System.Drawing.Size(100, 20)
         Me.NomeTextBox.TabIndex = 4
         '
-        'MoradaLabel
-        '
-        MoradaLabel.AutoSize = True
-        MoradaLabel.Location = New System.Drawing.Point(149, 158)
-        MoradaLabel.Name = "MoradaLabel"
-        MoradaLabel.Size = New System.Drawing.Size(45, 13)
-        MoradaLabel.TabIndex = 5
-        MoradaLabel.Text = "morada:"
-        '
         'MoradaTextBox
         '
         Me.MoradaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RestaurantesBindingSource, "morada", True))
-        Me.MoradaTextBox.Location = New System.Drawing.Point(227, 155)
+        Me.MoradaTextBox.Location = New System.Drawing.Point(159, 93)
         Me.MoradaTextBox.Name = "MoradaTextBox"
         Me.MoradaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.MoradaTextBox.TabIndex = 6
         '
-        'ContatoLabel
-        '
-        ContatoLabel.AutoSize = True
-        ContatoLabel.Location = New System.Drawing.Point(149, 184)
-        ContatoLabel.Name = "ContatoLabel"
-        ContatoLabel.Size = New System.Drawing.Size(46, 13)
-        ContatoLabel.TabIndex = 7
-        ContatoLabel.Text = "contato:"
-        '
         'ContatoTextBox
         '
         Me.ContatoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RestaurantesBindingSource, "contato", True))
-        Me.ContatoTextBox.Location = New System.Drawing.Point(227, 181)
+        Me.ContatoTextBox.Location = New System.Drawing.Point(159, 119)
         Me.ContatoTextBox.Name = "ContatoTextBox"
         Me.ContatoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.ContatoTextBox.TabIndex = 8
         '
-        'NomecontatoLabel
-        '
-        NomecontatoLabel.AutoSize = True
-        NomecontatoLabel.Location = New System.Drawing.Point(149, 210)
-        NomecontatoLabel.Name = "NomecontatoLabel"
-        NomecontatoLabel.Size = New System.Drawing.Size(72, 13)
-        NomecontatoLabel.TabIndex = 9
-        NomecontatoLabel.Text = "nomecontato:"
-        '
         'NomecontatoTextBox
         '
         Me.NomecontatoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RestaurantesBindingSource, "nomecontato", True))
-        Me.NomecontatoTextBox.Location = New System.Drawing.Point(227, 207)
+        Me.NomecontatoTextBox.Location = New System.Drawing.Point(159, 145)
         Me.NomecontatoTextBox.Name = "NomecontatoTextBox"
         Me.NomecontatoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.NomecontatoTextBox.TabIndex = 10
